@@ -176,6 +176,7 @@ public class MainLoop extends JFrame
 				QueryDatabase.queryFilm("", "", "", "", content);
 				resultLabel.setText("共有 " + content.size() + " 部电影。");
 				jTable.invalidate();
+				jTable.repaint();
 				pack();
 			}
 		});
@@ -210,6 +211,7 @@ public class MainLoop extends JFrame
 		resultLabel.setText("查询“" + queryString + "”共有" + content.size()
 				+ "条结果。");
 		jTable.invalidate();
+		jTable.repaint();
 		this.pack();
 	}
 	
@@ -271,6 +273,7 @@ public class MainLoop extends JFrame
 			QueryDatabase.queryFilm("", queryName, queryMark, queryDate,
 					content);
 			jTable.invalidate();
+			jTable.repaint();
 		} else
 		{
 			resultLabel.setText("增加失败！");
@@ -352,6 +355,7 @@ public class MainLoop extends JFrame
 			QueryDatabase.queryFilm(queryID, queryName, queryMark, queryDate,
 					content);
 			jTable.invalidate();
+			jTable.repaint();
 		} else
 		{
 			resultLabel.setText("修改失败！");
